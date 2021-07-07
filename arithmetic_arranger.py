@@ -1,5 +1,9 @@
-def arithmetic_arranger(problems, show=True):
+def arithmetic_arranger(problems, show=False):
 
+    line1 = ""
+    line2 = ""
+    line3 = ""
+    line4 = ""
     answer = ""
     arranged_problems = ""
 
@@ -29,17 +33,14 @@ def arithmetic_arranger(problems, show=True):
         dashes = "-" * width
         spaces = "    "
 
-        line1 = str(first_number).rjust(width) + spaces
-        line2 = operator + str(second_number).rjust(width - 1) + spaces
-        line3 = dashes + spaces
-        line4 = answer.rjust(width) + spaces
+        line1 += str(first_number).rjust(width) + spaces
+        line2 += operator + str(second_number).rjust(width - 1) + spaces
+        line3 += dashes + spaces
+        line4 += answer.rjust(width) + spaces
 
         if show:
-            arranged_problems = line1 + "\n" + line2 + "\n" + line3 + "\n" + line4
+            arranged_problems = line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n"
         else:
-            arranged_problems = line1 + "\n" + line2 + "\n" + line3
+            arranged_problems = line1 + "\n" + line2 + "\n" + line3 + "\n"
 
     return arranged_problems
-
-
-print(arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]))
