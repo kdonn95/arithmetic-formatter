@@ -1,4 +1,4 @@
-def arithmetic_arranger(problems, show=False):
+def arithmetic_arranger(problems, show=True):
 
     line1 = ""
     line2 = ""
